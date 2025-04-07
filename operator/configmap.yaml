@@ -6,11 +6,11 @@ data:
   go-http: |
     [
       {
-        "name": "UPDATED_ENV",
-        "value": "updated_value"
+        "name": "LOG_LEVEL",
+        "value": "INFO"
       },
       {
-        "name": "ANOTHER_ENV",
-        "value": "another_value"
+        "name": "REGION",
+        "value": "us-west-2"
       }
     ]
