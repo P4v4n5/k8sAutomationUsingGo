@@ -36,6 +36,7 @@ Install Minikube - https://minikube.sigs.k8s.io/docs/start/?arch=%2Fwindows%2Fx8
 minikube version
 minikube start --driver=docker
 ```
+<img src="images/PrerequisiteFlow.png">
 
 # Build and Deploy the Go HTTP Server in Kubernetes
 
@@ -43,7 +44,7 @@ Make sure you are inside go-http-server directory.
 
 ## Build Docker image:
 
-***we should make sure Minikube uses your local Docker image:
+Make sure Minikube uses your local Docker image:
 
 ```bash
 minikube docker-env
