@@ -5,11 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 	"time"
-
-	v1 "k8s.io/api/core/v1"
-	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+    metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/client-go/kubernetes"
 	"k8s.io/client-go/rest"
+	v1 "k8s.io/api/core/v1"
 )
 
 type EnvVar struct {
@@ -45,7 +44,7 @@ func main() {
 }
 
 func syncEnvConfig(clientset *kubernetes.Clientset) error {
-	// Get the ConfigMap named "environment" from the default namespace
+	// to get the ConfigMap named "environment" from the default namespace
 	cm, err := clientset.CoreV1().ConfigMaps("default").Get(context.TODO(), "environment", metav1.GetOptions{})
 	if err != nil {
 		return fmt.Errorf("could not read configmap: %v", err)
