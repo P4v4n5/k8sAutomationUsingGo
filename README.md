@@ -24,7 +24,7 @@ choco install kubernetes-cli
 kubectl version --client
 ```
 
-Install Docker desktop. Go to settings and allow kubernetes to run.
+Install Docker desktop. Go to settings inside Docker desktop and allow kubernetes to run.
 
 ```bash
 docker version
