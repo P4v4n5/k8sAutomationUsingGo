@@ -1,4 +1,4 @@
-# Kubernetes Dynamic Environment Variable Operator
+# Kubernetes Dynamic Environment Variable Operator using Go!
 
 This project demonstrates how to create a custom Kubernetes Operator using Go that dynamically updates the environment variables of a running microservice by watching a ConfigMap.
 
