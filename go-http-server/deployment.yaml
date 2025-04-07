@@ -1,0 +1,35 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: go-http
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: go-http
+  template:
+    metadata:
+      labels:
+        app: go-http
+    spec:
+      containers:
+      - name: go-http
+        image: go-http-env
+        imagePullPolicy: Never
+        ports:
+        - containerPort: 8080
+        env:
+        - name: INITIAL_ENV
+          value: "hello"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: go-http
+spec:
+  selector:
+    app: go-http
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080

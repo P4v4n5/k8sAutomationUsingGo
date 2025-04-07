@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: env-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: env-operator
+  template:
+    metadata:
+      labels:
+        app: env-operator
+    spec:
+      serviceAccountName: default
+      containers:
+      - name: operator
+        image: env-operator
+        imagePullPolicy: Never

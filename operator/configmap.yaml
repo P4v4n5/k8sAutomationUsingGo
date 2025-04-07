@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: environment
+data:
+  go-http: |
+    [
+      {
+        "name": "UPDATED_ENV",
+        "value": "updated_value"
+      },
+      {
+        "name": "ANOTHER_ENV",
+        "value": "another_value"
+      }
+    ]
