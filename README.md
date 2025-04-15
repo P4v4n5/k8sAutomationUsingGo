@@ -2,7 +2,7 @@
 
 This project demonstrates how to create a custom Kubernetes Operator using Go that dynamically updates the environment variables of a running microservice by watching a ConfigMap.
 
-## Project Structure
+## Project Directory Structure
 
 <img src="images/DirectoryStructure.png">
 
